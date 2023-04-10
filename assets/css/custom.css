@@ -1,0 +1,115 @@
+/* set max image height */
+
+
+/* hide author names */
+
+.author-list,
+.author-name,
+.post-card-byline-content span:first-of-type {
+    display: none;
+}
+.post-card-byline-content {
+    margin-left: 0;
+}
+
+
+/* Table of Contents */
+
+
+/* styling background of ToC */
+div#toc {
+    border: 2px solid #a2a9b1;
+    background-color: #f8f9fa;
+    padding: 5px;
+    z-index: 1;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+
+div#toc ol {
+   /* Move bullets inside. Applies to both first and second level list items. */
+    list-style-position: inside;
+  /* Cancel out Ghost's default margin-bottom: 30px. */
+    margin-bottom: 0;
+    /* suppress list numbers. */
+    list-style: none;
+    /* make it so section names don't have to line wrap as much */
+    padding-right: 3px;
+}
+
+p.toc-title {
+    font-weight: bold;
+}
+
+
+div#toc li {
+/*shrink line height*/
+  line-height:110%;
+}
+
+div#toc a {
+  color: #000;
+}
+
+
+div#toc a.is-active-link {
+  /*bold current section of TOC*/
+    font-weight: bold;
+}
+
+
+/*stops the h1 in TOC from indenting extra
+div#toc li {
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+div#toc aside.toc ol:first-child
+{
+    padding-left: 0px;
+    list-style-type: none;
+}
+*/
+
+
+.toc-link.node-name--H4, .toc-link.node-name--H5 {
+  /*increase line height*/
+  line-height:110%;
+}
+
+/* make ToC float on right side if big screen */
+@media only screen and (min-width: 1450px) {
+div#toc {
+  position: fixed;
+  top: 72px;
+  right: 5px;
+  max-width: 330px;
+}
+
+
+
+/* basic table styling*/
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 10px;
+}
+
+
+blockquote p {
+    margin: 0.8em 0;
+    /* custom value */
+    font-size: 1em;
+    font-weight: 300;
+}
+
+img.kg-image:hover {
+  transform: scale(1.1);
+}
+
+blockquote pre {
+  font-style: normal;
+}
