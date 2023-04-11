@@ -23,7 +23,10 @@ div#toc {
     padding: 5px;
     z-index: 1;
     max-width: 400px;
+    max-height: 600px;
     margin: 0 auto;
+    overflow: scroll;
+    margin-top: 20px;
 }
 
 
@@ -53,9 +56,9 @@ div#toc a {
 }
 
 
-div#toc a.is-active-link {
+div#toc a.is-active-link {
   /*bold current section of TOC*/
-    font-weight: bold;
+    font-weight: bold;
 }
 
 
@@ -85,6 +88,7 @@ div#toc {
   top: 72px;
   right: 5px;
   max-width: 330px;
+
 }
 
 /* Tables - white-space rule override of screen.css*/
