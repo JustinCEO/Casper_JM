@@ -1,6 +1,6 @@
 {{!< default}}
 
-{{#get "posts" limit="all" filter="tags:microblog"}}
+{{#get "posts" limit="5" filter="tags:microblog"}}
     {{#foreach posts}}
 
     <article class="article {{post_class}}">
@@ -83,7 +83,18 @@
     </article>
 
 
-
-
     {{/foreach}}
+
+    {{#if pagination.pages}}
+        <nav class="pagination" role="navigation">
+            {{#if pagination.prev}}
+                <a class="pagination-prev" href="{{pagination.prev}}">Previous</a>
+            {{/if}}
+            {{#if pagination.next}}
+                <a class="pagination-next" href="{{pagination.next}}">Next</a>
+            {{/if}}
+        </nav>
+    {{/if}}
+
 {{/get}}
+
